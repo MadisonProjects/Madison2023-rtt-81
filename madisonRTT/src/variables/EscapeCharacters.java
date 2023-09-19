@@ -7,6 +7,8 @@ public class EscapeCharacters {
 		System.out.println("This is a tab character ->\t<-");
 		System.out.println("1\tOne\t\tCo13");
 		System.out.println("10\tTen\t\tCo13");
+		// next two lines will appear the same but one uses spaces and the other tabs
+		
 		System.out.println("100\tOne Hundred\tCo13");
 		
 		

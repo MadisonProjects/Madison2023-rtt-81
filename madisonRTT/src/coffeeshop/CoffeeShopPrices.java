@@ -1,28 +1,77 @@
 package coffeeshop;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CoffeeShopPrices {
 	
-	public static void main(String[] args) {
-		// the value in each product is the pric
-		double coffee = 5.43d;
-		double tea = 4.33d;
-		double cookie = 6.76;
-		double subtotal = 0;
+	
+	List<Product> products = new ArrayList<> ();
+	
+	
+	public void setupProducts() {
+		Product coffee = new Product ();
+		coffee.setName("Coffee");
+		coffee.setPrice(5.44);
+		products.add(coffee);
 		
-		// 3 items of first item
-		subtotal = coffee * 3;
+		Product tea = new Product ();
+		tea.setName("Tea");
+		tea.setPrice(4.33);
+		products.add(tea);
+		
+		Product cookie = new Product ();
+		cookie.setName("Cookie");
+		cookie.setPrice(6.77);
+		products.add(cookie);
+		
+		printAllProducts();
+		
+	}
+	
+	public void printProduct(Product product) {
+		System.out.println("Product name : " + 
+				product.getName() + " Price : " 
+				+ product.getPrice () ) ;
+		
+	}
+	
+	public void printAllProducts() {
+		for (Product product : products) {
+			printProduct (product);
+		}
+	}
+	
+	public static void main(String[] args) {
+		CoffeeShopPrices cf = new CoffeeShopPrices();
+		cf.setupProducts();
+	
+		// the value in each product is the price
+		double coffee = 5.44d;
+		double tea = 4.33d;
+		double cookie = 6.73d;
+		
+		double subTotal = 0;
+		
+		// 3 items of first product
+		subTotal = coffee * 1;
 		
 		// 4 items of the 2nd product
-		subtotal = subtotal + (tea * 4);
+		subTotal = subTotal + (tea * 1);
 		
 		// 2 items of the 3rd product
-		subtotal = subtotal + (cookie * 2);
+		subTotal = subTotal + (cookie * 1);
 		
-		DecimalFormat df = new DecimalFormat ("0.00");
+		DecimalFormat df = new DecimalFormat ("$0.00");
+		System.out.println("subtotal : " + df.format(subTotal));
 		
-		System.out.println("subtotal : " + df.format(subtotal));
+		double salesTax = subTotal * 0.10;
+		System.out.println("Sales Tax : " + df.format(salesTax));
+		
+		double totalSale = subTotal + salesTax;
+		System.out.println("Total  : " + df.format(totalSale));
+		
 		
 	}
 

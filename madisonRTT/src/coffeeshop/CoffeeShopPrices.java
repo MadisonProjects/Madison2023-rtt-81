@@ -14,6 +14,8 @@ public class CoffeeShopPrices {
 	// class member variable
 	
 	Scanner input = new Scanner(System.in);
+
+	private List<Product> order;
 	
 	
 	public void setupProducts() {
@@ -41,7 +43,8 @@ public class CoffeeShopPrices {
 		
 	}
 	public void printProduct(Product product) {
- 		System.out.println("Product name : " + product.getName() + " Price : " + product.getPrice());
+ 		System.out.println( product.getName() + 
+ 				" Price : $" + product.getPrice());
  		
 	}
 	
@@ -89,19 +92,31 @@ public class CoffeeShopPrices {
 	}
 
 		public int userSelect( ) {
+			
 			System.out.println("1) Print the menu items and prices") ;
 			System.out.println("2) Add an item to your order") ;
 			System.out.println("3) Print the items in your order.") ;
 			System.out.println("4) Checkout") ;
 			
 			System.out.print ("What would you like to do?") ;
-		
-			
 			int select = input.nextInt();
 			
 			return select;
 		} 
 		
+		public void userSelectProduct() {
+			System.out.print("Enter product name to order: ");
+			String orderSelection = input.nextLine();
+			
+			for (Product product : products) {
+				if (product.getName().equalsIgnoreCase(orderSelection)) {
+					order.add(product);
+					System.out.println("Added" + product.getName() + "to your order.");
+				}
+			}
+			
+			
+		}
 		public static void main(String[] args) {
 			CoffeeShopPrices cf = new CoffeeShopPrices();
 			cf.setupProducts();

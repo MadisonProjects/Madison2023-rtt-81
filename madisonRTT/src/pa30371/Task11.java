@@ -1,4 +1,8 @@
 package pa30371;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 /*Task 11: 
  * Write code that asks the user how many favorite things they have. 
  * Based on their answer, 
@@ -9,8 +13,22 @@ package pa30371;
 public class Task11 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		Scanner scanner = new Scanner (System.in);
+		
+		System.out.println("How many favorite things? ");
+		int numFavorites = scanner.nextInt();
+		
+		String[] favorites = new String[numFavorites];
+		
+		for( int pos = 0 ; pos < numFavorites ; pos++) {
+			System.out.println("Enter favorite thing #" + pos);
+			favorites[pos]= scanner.nextLine ();
+			
+		}
+		
+		System.out.println(Arrays.toString(favorites));
+		
 	}
 
 }

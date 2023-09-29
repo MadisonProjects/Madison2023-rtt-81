@@ -8,5 +8,12 @@ package pa30371;
  */
 
 public class Task10 {
+	
+	public static void main(String[] args) {
+		
+		Object[] objectArray = new Object[4];
+	
+		// objectArray[0] = Integer.valueOf(4)
+	}
 
 }

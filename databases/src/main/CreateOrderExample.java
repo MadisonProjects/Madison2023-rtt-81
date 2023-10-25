@@ -3,7 +3,6 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import org.perscholas.database.dao.OrderDAO;
 import org.perscholas.database.entity.Customer;
 import org.perscholas.database.entity.Order;
 

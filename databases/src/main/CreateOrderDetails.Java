@@ -1,8 +1,5 @@
 package org.perscholas.database;
 
-import org.perscholas.database.dao.OrderDAO;
-import org.perscholas.database.dao.OrderDetailsDAO;
-import org.perscholas.database.dao.ProductDAO;
 import org.perscholas.database.entity.Order;
 import org.perscholas.database.entity.OrderDetail;
 import org.perscholas.database.entity.Product;

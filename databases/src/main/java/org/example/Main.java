@@ -1,7 +1,20 @@
-package org.example;
 
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
-    }
-}
+    <?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+
+<groupId>com.example</groupId>
+<artifactId>my-java-project</artifactId>
+<version>1.0-SNAPSHOT</version>
+
+<!-- Define your dependencies, plugins, and project configuration here. -->
+</project>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+
+    <mapping class="org.perscholas.database.entity.Order" />
+    <mapping class="org.perscholas.database.entity.Customer" />
+
+    </session-factory>

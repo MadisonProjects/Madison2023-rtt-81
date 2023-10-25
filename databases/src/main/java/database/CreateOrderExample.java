@@ -1,15 +1,9 @@
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import database.entity.Customer;
+import database.entity.Order;
+
 import java.util.List;
 
-import org.perscholas.database.entity.Customer;
-import org.perscholas.database.entity.Order;
-
 public class CreateOrderExample {
-    @@ -38,12 +40,27 @@ public void createOrder() throws ParseException {
-
-    }
 
     public void queryOrder() {
         Order o = orderDao.findById(10100);
@@ -20,7 +14,7 @@ public class CreateOrderExample {
 
         // all the customers orders
         List<Order> orders = c.getOrders();
-        for ( Order order : orders ) {
+        for (Order order : orders) {
             System.out.println("Order " + order.getId());
         }
     }
@@ -35,3 +29,5 @@ public class CreateOrderExample {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+    }
+}

@@ -3,7 +3,12 @@ package database.dao;
 import database.entity.Customer;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+
+import javax.persistence.NoResultException;
+import javax.persistence.TypedQuery;
+import java.util.List;
 
 
 public class CustomerDAO {

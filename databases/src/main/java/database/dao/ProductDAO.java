@@ -1,49 +1,47 @@
-package org.perscholas.database.dao;
+package database.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-
-import org.perscholas.database.entity.Order;
+import org.perscholas.database.entity.Product;
 
 import java.util.List;
 
-public class OrderDAO {
+public class ProductDAO {
     private final SessionFactory sessionFactory;
 
-    public OrderDAO(SessionFactory sessionFactory) {
+    public ProductDAO(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
-    public Order findById(Integer id) {
+    public Product findById(Integer id) {
         try (Session session = sessionFactory.openSession()) {
-            return session.get(Order.class, id);
+            return session.get(Product.class, id);
         }
     }
 
-    public List<Order> findAllOrders() {
+    public List<Product> findAllProducts() {
         try (Session session = sessionFactory.openSession()) {
-            return session.createQuery("FROM Order", Order.class).list();
+            return session.createQuery("FROM Product", Product.class).list();
         }
     }
 
-    public void save(Order order) {
+    public void save(Product product) {
         try (Session session = sessionFactory.openSession()) {
             Transaction transaction = session.beginTransaction();
-            session.saveOrUpdate(order);
+            session.saveOrUpdate(product);
             transaction.commit();
         }
     }
 
-    public void delete(int orderId) {
+    public void delete(int productId) {
         try (Session session = sessionFactory.openSession()) {
             Transaction transaction = session.beginTransaction();
-            Order order = session.get(Order.class, orderId);
-            if (order != null) {
-                session.delete(order);
+            Product product = session.get(Product.class, productId);
+            if (product != null) {
+                session.delete(product);
             }
             transaction.commit();
-            session.close();
         }
     }
 

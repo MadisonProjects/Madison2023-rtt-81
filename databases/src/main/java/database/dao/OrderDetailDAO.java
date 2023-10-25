@@ -1,4 +1,4 @@
-package org.perscholas.database.dao;
+package database.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

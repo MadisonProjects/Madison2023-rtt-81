@@ -1,4 +1,4 @@
-package org.perscholas.database;
+package database;
 
 import java.util.List;
 

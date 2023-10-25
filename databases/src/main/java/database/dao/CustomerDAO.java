@@ -1,58 +1,10 @@
-package org.perscholas.database.dao;
+package database.dao;
 
+import database.entity.Customer;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.perscholas.database.entity.Customer;
 
-public class CustomerDAO {
-    void save(Customer customer);
-    void update(Customer customer);
-    void delete(int customerId);
-    Customer findByCustomerId(int customerId);
-    List<Customer> findAllCustomers();
-}
-public class JdbcCustomerDAO implements CustomerDAO {
-
-    // Implement the methods defined in the interface
-    // Use JDBC or an ORM framework to perform the database operations.
-
-    @Override
-    public void save(Customer customer) {
-        // Implement the code to insert a customer into the database.
-    }
-
-    @Override
-    public void update(Customer customer) {
-        // Implement the code to update a customer in the database.
-    }
-
-    @Override
-    public void delete(int customerId) {
-        // Implement the code to delete a customer from the database.
-    }
-
-    @Override
-    public Customer findByCustomerId(int customerId) {
-        // Implement the code to retrieve a customer by ID from the database.
-    }
-
-    @Override
-    public List<Customer> findAllCustomers() {
-        // Implement the code to retrieve all customers from the database.
-    }
-}
-
- import java.util.List;
-
-         import javax.persistence.NoResultException;
-         import javax.persistence.TypedQuery;
-
-         import org.hibernate.Session;
-         import org.hibernate.SessionFactory;
-         import org.hibernate.Transaction;
-         import org.hibernate.cfg.Configuration;
-         import org.perscholas.database.entity.Customer;
 
 public class CustomerDAO {
 

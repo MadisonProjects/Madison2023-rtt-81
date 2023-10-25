@@ -1,4 +1,4 @@
-package org.perscholas.database.entity;
+package database.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;

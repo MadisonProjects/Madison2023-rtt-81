@@ -1,4 +1,4 @@
-package org.perscholas.database;
+package database;
 
 import org.perscholas.database.entity.Order;
 import org.perscholas.database.entity.OrderDetail;

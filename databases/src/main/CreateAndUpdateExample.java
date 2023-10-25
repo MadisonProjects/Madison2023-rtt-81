@@ -2,7 +2,6 @@ package org.perscholas.database;
 
 import java.util.List;
 
-import org.perscholas.database.dao.CustomerDAO;
 import org.perscholas.database.entity.Customer;
 
 public class CreateAndUpdateExample {

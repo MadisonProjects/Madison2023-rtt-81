@@ -3,6 +3,7 @@ package org.perscholas.database.dao;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+
 import org.perscholas.database.entity.Order;
 
 import java.util.List;
@@ -42,6 +43,7 @@ public class OrderDAO {
                 session.delete(order);
             }
             transaction.commit();
+            session.close();
         }
     }
 

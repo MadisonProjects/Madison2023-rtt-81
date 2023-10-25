@@ -6,11 +6,11 @@ import org.hibernate.cfg.Configuration;
 import org.perscholas.database.entity.Customer;
 
 public class CustomerDAO {
-        void save(Customer customer);
-        void update(Customer customer);
-        void delete(int customerId);
-        Customer findByCustomerId(int customerId);
-        List<Customer> findAllCustomers();
+    void save(Customer customer);
+    void update(Customer customer);
+    void delete(int customerId);
+    Customer findByCustomerId(int customerId);
+    List<Customer> findAllCustomers();
 }
 public class JdbcCustomerDAO implements CustomerDAO {
 

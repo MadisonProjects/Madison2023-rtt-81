@@ -29,7 +29,7 @@ public class CreateAndUpdateExample {
         System.out.println("customer id before save " + c.getId());
         customerDao.save(c);
 
-        // after you have have saved the entity, part of the save process updates the id
+        // after you have saved the entity, part of the save process updates the id
         System.out.println("customer id after save " + c.getId());
     }
 
@@ -44,7 +44,7 @@ public class CreateAndUpdateExample {
             c.setContactLastname("Updated Lastname");
             c.setCreditLimit(44444.44);
 
-            // we can set the FK but the FK number needs to exist in employees table or it
+            // we can set the FK but the FK number needs to exist in employees table, or it
             // will error
             c.setSalesRepEmployeeId(1002);
 
